@@ -4,6 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         title : "La tua lista comprende:",
+        userInput : "",
         array : [
           "Pane",
           "Acqua",
@@ -15,11 +16,14 @@ const { createApp } = Vue
           "Cioccolata",
           "Farina",
           "Pizza",
-        ]
-        
+        ],        
       }
     },
     methods: {
-
-    }
+      addedElement() {
+        this.array.push(this.userInput)
+        console.log("Elemento da aggiungere alla lista dato da valore di input", this.userInput)
+        this.userInput = ""
+      }
+    },
   }).mount('#app')
