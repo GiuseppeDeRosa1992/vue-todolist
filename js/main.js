@@ -16,7 +16,7 @@ const { createApp } = Vue
           "Cioccolata",
           "Farina",
           "Pizza",
-        ],        
+        ],       
       }
     },
     methods: {
@@ -26,6 +26,14 @@ const { createApp } = Vue
           console.log("Elemento da aggiungere alla lista dato da valore di input", this.userInput)
           this.userInput = ""
         }
+      },
+      deleteElement(index) {
+        this.array[index] = ""
       }
     },
+    mounted() {
+      console.log(this.array)
+    }
   }).mount('#app')
+
+  
