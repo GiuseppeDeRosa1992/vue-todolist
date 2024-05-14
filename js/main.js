@@ -21,9 +21,11 @@ const { createApp } = Vue
     },
     methods: {
       addedElement() {
-        this.array.push(this.userInput)
-        console.log("Elemento da aggiungere alla lista dato da valore di input", this.userInput)
-        this.userInput = ""
+        if(this.userInput != "") {
+          this.array.push(this.userInput)
+          console.log("Elemento da aggiungere alla lista dato da valore di input", this.userInput)
+          this.userInput = ""
+        }
       }
     },
   }).mount('#app')
