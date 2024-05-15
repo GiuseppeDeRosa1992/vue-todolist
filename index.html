@@ -21,11 +21,11 @@
         <h1 class="text-center p-2 bg-warning">{{ title }}</h1>
         <div class="text-center">
             <input class="w-25 p-1 m-1" type="text" placeholder="Aggiungi alla lista" v-model="userInput">
-            <button @click="addedElement()" class="p-1">Aggiungi</button>
+            <button @click="addedElement(i)" class="p-1">Aggiungi alla lista</button>
         </div>
         <ul>
-            <li v-for="element, i in array">
-                {{element}} 
+            <li :class="color(i)" v-for="element, i in array">
+                {{element.elemento}}
                 <i @click="deleteElement(i)" class="fa-solid fa-xmark"></i>
             </li>
         </ul>
