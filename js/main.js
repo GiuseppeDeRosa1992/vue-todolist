@@ -87,7 +87,7 @@
     methods: {
       addedElement() {
         if(this.userInput != "") {
-          this.array.push(this.userInput)
+          this.array.push({elemento : this.userInput, booleano: true})
           console.log("Elemento da aggiungere alla lista dato da valore di input", this.userInput)
           this.userInput = ""
         }
